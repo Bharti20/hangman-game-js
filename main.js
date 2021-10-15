@@ -15,6 +15,11 @@ function get_guessed(guessed_array) {
 };
 
 function hangman(){
+    var available_letters = 'abcdefghijklmnopqrstivwxyz'
+    console.log()
+    console.log("************* Welcome to the Hangman Game ********************")
+    console.log()
+    console.log(`Available letters ${available_letters}`)
     var i = 0
     var array = []
     while(i<secretWord.length){
@@ -22,9 +27,9 @@ function hangman(){
         if(secretWord.includes(user)){
             array.push(user)
             var outPut = get_guessed(array)
-            console.log('good guess ' + outPut)
+            console.log(`good guess: ${outPut}`)
         }else{
-            console.log('opps this letter is not in my word')
+            console.log(`opps this letter ${user} is not in my word`)
         }i++
 
     };
